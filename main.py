@@ -32,11 +32,11 @@ def validate(text: str = TEXT) -> str:
 
 
 def main() -> None:
-    validate()
+    text = validate()
     os.makedirs("/output", exist_ok=True)
     with open("/output/entry.txt", "w", encoding="utf-8") as f:
-        f.write(TEXT)
-    print(TEXT)
+        f.write(text)
+    print(text)
 
 
 if __name__ == "__main__":
